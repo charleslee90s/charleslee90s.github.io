@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-21T07:55:26.196Z</updated>
+    <updated>2019-06-21T07:57:06.976Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Charles&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Muze 第一版需求意见]]></title>
+        <title type="html"><![CDATA[Muze 第一版修改意见]]></title>
         <id>https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian</id>
         <link href="https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian">
         </link>
