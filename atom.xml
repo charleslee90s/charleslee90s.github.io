@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-21T06:21:29.727Z</updated>
+    <updated>2019-06-21T07:54:42.787Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://charleslee90s.github.io/images/avatar.png</logo>
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Charles&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Muze 第一版需求意见]]></title>
+        <id>https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian</id>
+        <link href="https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian">
+        </link>
+        <updated>2019-06-21T07:31:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>测试范围主要以样式和颜色为主</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>测试范围主要以样式和颜色为主</p>
+<!-- more -->
+<ol>
+<li>Daily Picks的搜索关键词按照 music+ 月+ 日+年 的方式，如 music June 5 2019</li>
+<li>Daily picks每张卡片颜色按照 UI 设计的进行轮循</li>
+<li>Top Artists 和 Hot Tag 的图片上需要覆盖蒙层</li>
+<li>第一版不上 Artists 和 geners 这两个频道</li>
+<li>Top Artists 和 Hot Tag第一版各展示5组内容</li>
+<li>Top Artists 和 Hot Tag取词从100个随机改为50随机，避免出现过老的内容</li>
+<li>歌单页的 play 和 like button 改颜色为紫色</li>
+<li>设置页的字体和 switch 开关颜色改为紫色</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Money Project]]></title>
         <id>https://charleslee90s.github.io/post/money-project</id>
