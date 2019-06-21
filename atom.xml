@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-21T08:04:02.580Z</updated>
+    <updated>2019-06-21T08:05:08.690Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
-    <subtitle>My documentation and weekly plan</subtitle>
+    <subtitle>My document and weekly plan</subtitle>
     <logo>https://charleslee90s.github.io/images/avatar.png</logo>
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Charles&apos;s Blog</rights>
