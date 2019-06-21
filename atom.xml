@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-06-21T03:42:43.620Z</updated>
+    <title>Charles&apos;s Blog</title>
+    <updated>2019-06-21T06:17:21.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>My documentation and weekly plan</subtitle>
     <logo>https://charleslee90s.github.io/images/avatar.png</logo>
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, Charles&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[Money Project]]></title>
         <id>https://charleslee90s.github.io/post/money-project</id>
