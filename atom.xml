@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-21T08:05:08.690Z</updated>
+    <updated>2019-06-27T06:49:22.724Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -16,9 +16,11 @@
         <link href="https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian">
         </link>
         <updated>2019-06-21T07:31:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>测试范围主要以样式和颜色为主</p>
+        <summary type="html"><![CDATA[<h2 id="june-21">June 21</h2>
+<p>测试范围主要以样式和颜色为主</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>测试范围主要以样式和颜色为主</p>
+        <content type="html"><![CDATA[<h2 id="june-21">June 21</h2>
+<p>测试范围主要以样式和颜色为主</p>
 <!-- more -->
 <ol>
 <li>Daily Picks的搜索关键词按照 music+ 月+ 日+年 的方式，如 music June 5 2019</li>
@@ -29,6 +31,18 @@
 <li>Top Artists 和 Hot Tag取词从100个随机改为50随机，避免出现过老的内容</li>
 <li>歌单页的 play 和 like button 改颜色为紫色</li>
 <li>设置页的字体和 switch 开关颜色改为紫色</li>
+</ol>
+<h2 id="june-27">June 27</h2>
+<ol>
+<li>搜索框颜色</li>
+<li>trending ，Recent search 第一行的颜色红改紫；最后一行热词边框展示不全</li>
+<li>Top artists（把 s 去掉） 和 hot tag 各展示5个</li>
+<li>首页顶部的底图， for you样式用的 megamusic 的（成本低就这次改）</li>
+<li>产品名称大写</li>
+<li>daily picks 和体内 banner 广告间距缩小</li>
+<li>首页歌单标题为居左布局，允许两行展示</li>
+<li>daily picks 有些日期没有</li>
+<li>首页字体</li>
 </ol>
 ]]></content>
     </entry>
