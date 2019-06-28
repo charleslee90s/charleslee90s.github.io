@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-27T06:50:10.746Z</updated>
+    <updated>2019-06-28T02:47:00.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -43,6 +43,14 @@
 <li>首页歌单标题为居左布局，允许两行展示</li>
 <li>daily picks 有些日期没有</li>
 <li>首页字体</li>
+</ol>
+<h2 id="june-28">June 28</h2>
+<ol>
+<li>daily picks 和体内 banner 广告间距缩小</li>
+<li>首页两行标题时间距缩小</li>
+<li>Top Artists 和 Hot Tag 频道交叉显示</li>
+<li>通知栏白色小图标更换</li>
+<li>同步最新的通知栏优化代码（优化了在三星手机的显示）</li>
 </ol>
 ]]></content>
     </entry>
