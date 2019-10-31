@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-06-28T02:47:00.910Z</updated>
+    <updated>2019-10-31T03:42:55.446Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -67,7 +67,7 @@
 <p>新产品第一版在Free Music 项目最新代码基础上，不改变 library，search，play，ad 等基础架构逻辑，只改变产品包装与首页内容样式逻辑。</p>
 <!-- more -->
 <h2 id="首页改版">首页改版</h2>
-<p>在新的样式中，首页分为以下几个组成部分
+<p>在新的样式中，首页分为以下几个组成部分<br>
 其中Top Artist和Hot Tag因为可展示数据较多，做预加载</p>
 <h3 id="1-daily-picks">1. Daily Picks</h3>
 <p>新的Daily Picks 是以Date 为主要元素的日更新歌单，负责维持主页的内容新鲜度</p>
@@ -76,13 +76,13 @@
 <h4 id="样式">样式</h4>
 <p>卡片左右滑动，每天的歌单卡片预设若干配色，循环使用。只保留最近的10天歌单</p>
 <h3 id="2-top-artist">2. Top Artist</h3>
-<p>内容源为 lastfm 的 Chart.getTopArtists接口（原搜索热词中已使用）
+<p>内容源为 lastfm 的 Chart.getTopArtists接口（原搜索热词中已使用）<br>
 每天更新取100条keywords，用 keywords在 youtube 搜索接口中搜索10个歌单，生成一组 channel，这100组 channel 随机排序</p>
 <h3 id="3-hot-tag">3. Hot Tag</h3>
 <p>同上从Chart.getTopTags中获取 keywords</p>
 <h3 id="4-genres">4. Genres</h3>
 <p>样式为若干关键词做走马灯循环展示</p>
-<p>固定的keywords在这组展示包括：
+<p>固定的keywords在这组展示包括：<br>
 Hip hop, R&amp;B, Latin American, Country, Jazz, Folk, Christian, Indie, Classical, Funk, Metal, Blues, Punk, Reggae, Asian, Soul, Hard Rock, Pop, Rock, Electronic</p>
 <h3 id="5-artists-on-the-rise">5. Artists on the rise</h3>
 <p>样式为若干关键词做走马灯循环展示</p>
