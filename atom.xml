@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-10-31T04:50:00.861Z</updated>
+    <updated>2019-12-31T02:46:23.031Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -10,92 +10,4 @@
     <logo>https://charleslee90s.github.io/images/avatar.png</logo>
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Charles&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[Muze 第一版修改意见]]></title>
-        <id>https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian</id>
-        <link href="https://charleslee90s.github.io/post/muze-di-yi-ban-xu-qiu-yi-jian">
-        </link>
-        <updated>2019-06-21T07:31:45.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="june-21">June 21</h2>
-<p>测试范围主要以样式和颜色为主</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="june-21">June 21</h2>
-<p>测试范围主要以样式和颜色为主</p>
-<!-- more -->
-<ol>
-<li>Daily Picks的搜索关键词按照 music+ 月+ 日+年 的方式，如 music June 5 2019</li>
-<li>Daily picks每张卡片颜色按照 UI 设计的进行轮循</li>
-<li>Top Artists 和 Hot Tag 的图片上需要覆盖蒙层</li>
-<li>第一版不上 Artists 和 geners 这两个频道</li>
-<li>Top Artists 和 Hot Tag第一版各展示5组内容</li>
-<li>Top Artists 和 Hot Tag取词从100个随机改为50随机，避免出现过老的内容</li>
-<li>歌单页的 play 和 like button 改颜色为紫色</li>
-<li>设置页的字体和 switch 开关颜色改为紫色</li>
-</ol>
-<h2 id="june-27">June 27</h2>
-<ol>
-<li>搜索框颜色</li>
-<li>trending ，Recent search 第一行的颜色红改紫；最后一行热词边框展示不全</li>
-<li>Top artists（把 s 去掉） 和 hot tag 各展示5个</li>
-<li>首页顶部的底图， for you样式用的 megamusic 的（成本低就这次改）</li>
-<li>产品名称大写</li>
-<li>daily picks 和体内 banner 广告间距缩小</li>
-<li>首页歌单标题为居左布局，允许两行展示</li>
-<li>daily picks 有些日期没有</li>
-<li>首页字体</li>
-</ol>
-<h2 id="june-28">June 28</h2>
-<ol>
-<li>daily picks 和体内 banner 广告间距缩小</li>
-<li>首页两行标题时间距缩小</li>
-<li>Top Artists 和 Hot Tag 频道交叉显示</li>
-<li>通知栏白色小图标更换</li>
-<li>同步最新的通知栏优化代码（优化了在三星手机的显示）</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Money Project]]></title>
-        <id>https://charleslee90s.github.io/post/money-project</id>
-        <link href="https://charleslee90s.github.io/post/money-project">
-        </link>
-        <updated>2019-06-21T03:37:59.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="总述">总述</h2>
-<p>新产品第一版在Free Music 项目最新代码基础上，不改变 library，search，play，ad 等基础架构逻辑，只改变产品包装与首页内容样式逻辑。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="总述">总述</h2>
-<p>新产品第一版在Free Music 项目最新代码基础上，不改变 library，search，play，ad 等基础架构逻辑，只改变产品包装与首页内容样式逻辑。</p>
-<!-- more -->
-<h2 id="首页改版">首页改版</h2>
-<p>在新的样式中，首页分为以下几个组成部分<br>
-其中Top Artist和Hot Tag因为可展示数据较多，做预加载</p>
-<h3 id="1-daily-picks">1. Daily Picks</h3>
-<p>新的Daily Picks 是以Date 为主要元素的日更新歌单，负责维持主页的内容新鲜度</p>
-<h4 id="实现方式">实现方式</h4>
-<p>用 youtube 搜索接口检索出的第一个歌单结果，例如5月30日的歌单，搜 &quot;music may 30 2019&quot;</p>
-<h4 id="样式">样式</h4>
-<p>卡片左右滑动，每天的歌单卡片预设若干配色，循环使用。只保留最近的10天歌单</p>
-<h3 id="2-top-artist">2. Top Artist</h3>
-<p>内容源为 lastfm 的 Chart.getTopArtists接口（原搜索热词中已使用）<br>
-每天更新取100条keywords，用 keywords在 youtube 搜索接口中搜索10个歌单，生成一组 channel，这100组 channel 随机排序</p>
-<h3 id="3-hot-tag">3. Hot Tag</h3>
-<p>同上从Chart.getTopTags中获取 keywords</p>
-<h3 id="4-genres">4. Genres</h3>
-<p>样式为若干关键词做走马灯循环展示</p>
-<p>固定的keywords在这组展示包括：<br>
-Hip hop, R&amp;B, Latin American, Country, Jazz, Folk, Christian, Indie, Classical, Funk, Metal, Blues, Punk, Reggae, Asian, Soul, Hard Rock, Pop, Rock, Electronic</p>
-<h3 id="5-artists-on-the-rise">5. Artists on the rise</h3>
-<p>样式为若干关键词做走马灯循环展示</p>
-<p>随机取Artist 列表中的20个在这组中展示</p>
-<h2 id="歌单页">歌单页</h2>
-<p>样式保持与 Music Max 一致</p>
-<h2 id="计划中的推荐算法">计划中的推荐算法</h2>
-<p>客户端缓存下用户播放的 artist 和 tag，随机在这组数据中取 keywords 进行搜索，结果展示在首页的信息流中</p>
-<h2 id="服务端需求">服务端需求</h2>
-<h3 id="必备接口youtube搜索播放">必备接口：youtube搜索，播放</h3>
-<h3 id="请求缓存机制">请求缓存机制</h3>
-<p>由于每个 google 账号的请求量限额有限，需要对请求的数据在服务端做缓存，缓存可保留一周</p>
-<p>若后续配额依然不够则需要准备多个账号进行轮训请求</p>
-]]></content>
-    </entry>
 </feed>
