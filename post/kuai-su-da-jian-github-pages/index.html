@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -31,34 +31,19 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一只狗的生活经验
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80%E5%88%9B%E5%BB%BA-github-%E8%B4%A6%E5%8F%B7">一，创建 GitHub 账号</a></li>
+<li><a href="#%E4%BA%8C%E5%88%9B%E5%BB%BA-repository">二，创建 Repository</a></li>
+<li><a href="#%E4%B8%BB%E9%A2%98">主题</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -102,35 +87,75 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="remixicon-article-line"></i>
-          最新文章
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">快速搭建 GitHub Pages</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-01 / 1 min read
+        </div>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/post/kuai-su-da-jian-github-pages">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">快速搭建 GitHub Pages</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-11-01 / 1 min read</div>
-    </div>
-  </section>
+        <div class="post-content yue">
+          <ul>
+<li>最初如果想搭建简单的 个人Blog，用 GitHub Pages 就是最Easy and Free 的方式了。研究这个玩意的最初目的其实想作为我个人工作用的需求沟通工具用来给开发使用，但是需要给对应的项目单独建立 Pages以满足权限管理的需要。</li>
+</ul>
+<h2 id="一创建-github-账号">一，创建 GitHub 账号</h2>
+<p>通过邮箱进行注册<br>
+<img src="https://i.imgur.com/a4hzSbF.png" alt="1572592989062" loading="lazy"></p>
+<p>通过转动图片保证动物是正向的<br>
+<img src="https://i.imgur.com/3Dq74EU.png" alt="1572592993761" loading="lazy"><br>
+这种中立的情况则有对有错:D</p>
+<h2 id="二创建-repository">二，创建 Repository</h2>
+<p>在 Repository name 项需要填写的格式为 account.github.io</p>
+<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/I3ZesCU.jpg" alt="-w500" loading="lazy"></figure>
+<h2 id="主题">主题</h2>
+<p>建好 Repository 后，进入 Settings 进行配置<br>
+<img src="https://i.imgur.com/Z4dwGCm.jpg" alt="-w500" loading="lazy"></p>
+<p>可以选择一个 GitHub 预置的主题进行配置<br>
+<img src="https://i.imgur.com/Dz4vG7w.jpg" alt="-w500" loading="lazy"></p>
+<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/N3um7zH.jpg" alt="-w500" loading="lazy"></figure>
+<p>选择后就跳转到了内容编辑器内，可用 Html or Markdown 进行编写<br>
+<img src="https://i.imgur.com/xHWzPjO.jpg" alt="-w500" loading="lazy"></p>
+<p>完成编辑保存后就可以访问了，url格式为 account.github.io</p>
+<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/llrtYgT.jpg" alt="-w500" loading="lazy"></figure>
 
-        <div class="read-more">
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'faf534ff4a6fb70efeaa',
+    clientSecret: '881ae0e989ee79d02a7f0fe60c74a16c5a8ca293',
+    repo: 'charleslee90s.github.io',
+    owner: 'charleslee90s',
+    admin: ['charleslee90s'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
