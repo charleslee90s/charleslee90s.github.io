@@ -37,19 +37,9 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#artists-%E8%87%AA%E5%8A%A8%E5%8C%96">Artists 自动化</a>
-<ul>
-<li><a href="#h3-id1%E4%B8%9A%E5%8A%A1%E7%BB%93%E6%9E%84h2"><h3 id="1">业务结构</h2></a></li>
-<li><a href="#h3-id2%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89h2"><h3 id="2">部分参数定义</h2></a></li>
-<li><a href="#h3-id3artists%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="3">Artists相关接口</h2></a></li>
-<li><a href="#h3-id4albums%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="4">Albums相关接口</h2></a></li>
-<li><a href="#h3-id5track%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="5">Track相关接口</h2></a></li>
-<li><a href="#h3-id6tag-%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="6">Tag 相关接口</h2></a></li>
-</ul>
-</li>
-<li><a href="#lastfm%E4%B8%8E-youtube-%E7%9A%84%E6%AD%8C%E6%9B%B2%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%8E%A5">Last.fm与 Youtube 的歌曲数据对接</a></li>
-<li><a href="#%E4%B8%BB%E9%A1%B5%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E8%87%AA%E5%8A%A8%E5%8C%96">主页更多内容下拉刷新自动化</a></li>
-<li><a href="#%E4%B8%BB%E9%A1%B5%E6%89%8B%E5%8A%A8%E8%BF%90%E8%90%A5%E7%9A%84%E6%AD%8C%E5%8D%95">主页手动运营的歌单</a></li>
+<li><a href="#%E9%80%9A%E7%9F%A5%E6%9D%83%E9%87%8D%E9%BB%98%E8%AE%A4%E5%80%BC">通知权重默认值</a></li>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8A%E4%BC%A0%E6%8E%A8%E9%80%81%E9%80%9A%E7%9F%A5%E7%9A%84%E5%B7%B2%E8%AF%BB%E7%8A%B6%E6%80%81-hiiddeviceid">客户端上传推送通知的已读状态， HiID，deviceID</a></li>
+<li><a href="#%E6%8E%A8%E9%80%81%E5%8C%85%E5%90%AB%E7%9A%84-keyvalue">推送包含的 Key，Value</a></li>
 </ul>
 </li>
 </ul>
@@ -98,194 +88,164 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Youtube Music 内容自动化</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">积分系统的分组Push </h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-02-21 / 2 min read
+          2018-11-14 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/youtube-music-nei-rong-zi-dong-hua.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/ji-fen-xi-tong-de-fen-zu-push.jpg" alt="">
         
         <div class="post-content yue">
-          <h2 id="artists-自动化">Artists 自动化</h2>
-<ul>
-<li>
-<p><a href="#1">业务结构</a></p>
-</li>
-<li>
-<p><a href="#2">部分参数定义</a></p>
-</li>
-<li>
-<p><a href="#3">Artists相关接口</a></p>
-</li>
-<li>
-<p><a href="#4">Albums相关接口相关接口</a></p>
-</li>
-<li>
-<p><a href="#5">Track相关接口</a></p>
-</li>
-<li>
-<p><a href="#6">Tag相关接口</a></p>
-</li>
-</ul>
-<h3 id="h3-id1业务结构h2"><h3 id="1">业务结构</h2></h3>
-<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/jmRdmva.png" alt="内容架构" loading="lazy"></figure>
-<p>从第三方服务商提供的接口中获取数据，保存在我们的服务器中，并提供给客户端接口进行请求</p>
-<h3 id="h3-id2部分参数定义h2"><h3 id="2">部分参数定义</h2></h3>
-<p>autocorrect[0|1] —— 将拼写错误的艺术家姓名转换为正确的艺术家姓名，然后返回正确的版本。 更正后的艺术家姓名将在回复中返回。<br>
-lang —— eng<br>
-api_key —— 702db34a4847bf9ea056e7484246af84</p>
-<h3 id="h3-id3artists相关接口h2"><h3 id="3">Artists相关接口</h2></h3>
-<ul>
-<li>
-<p>Charts_TopArtists<br>
-<img src="https://i.imgur.com/WpWehwT.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>Artists_Info<br>
-<img src="https://i.imgur.com/CPBmtMl.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>Artists_TopTags<br>
-在上个接口中</p>
-</li>
-<li>
-<p>Artists_Similar<br>
-所有 TopTags 对应的 Tag_TopArtists的集合</p>
-</li>
-<li>
-<p>Artists_TopTracks<br>
-<img src="https://i.imgur.com/imJYotA.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>Artists_TopAlbums<br>
-<img src="https://i.imgur.com/8rAPAub.jpg" alt="" loading="lazy"></p>
-</li>
-</ul>
-<h3 id="h3-id4albums相关接口h2"><h3 id="4">Albums相关接口</h2></h3>
-<ul>
-<li>
-<p>Albums_Info<br>
-<img src="https://i.imgur.com/T33I5r5.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>Albums_TopTags<br>
-在上个接口中</p>
-</li>
-<li>
-<p>Albums_Similar<br>
-所有 TopTags 对应的 Tag_TopAlbums的集合</p>
-</li>
-</ul>
-<h3 id="h3-id5track相关接口h2"><h3 id="5">Track相关接口</h2></h3>
-<ul>
-<li>
-<p>Track_Info<br>
-<img src="https://i.imgur.com/Pu7Z9H0.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>Track_TopTags<br>
-在上个接口中</p>
-</li>
-<li>
-<p>Track_Similar<br>
-所有 TopTags 对应的 Tag_TopTracks的集合</p>
-</li>
-</ul>
-<h3 id="h3-id6tag-相关接口h2"><h3 id="6">Tag 相关接口</h2></h3>
-<p>现有的艺术家，专辑，歌曲中包含此 tag 的内容</p>
-<ul>
-<li>Tag_Info</li>
-</ul>
-<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/fJ25B2S.jpg" alt="" loading="lazy"></figure>
-<ul>
-<li>
-<p>Tag_TopArtists<br>
-现有的艺术家中包含此 Tag 的内容，并提供给 Artists_Similar 使用</p>
-</li>
-<li>
-<p>Tag_TopAlbums<br>
-现有的专辑中包含此 Tag 的内容，并提供给 Albums_Similar 使用</p>
-</li>
-<li>
-<p>Tag_TopTracks<br>
-现有的歌曲中包含此 Tag 的内容，并提供给 Track_Similar 使用</p>
-</li>
-</ul>
-<hr>
-<h2 id="lastfm与-youtube-的歌曲数据对接">Last.fm与 Youtube 的歌曲数据对接</h2>
+          <p>##分组</p>
+<table> 
+   <tr>
+      <td>是否注册</td>
+      <td>是否兑换过</td>
+      <td>用户分组</td>
+      <td>推送内容优先级</td>
+   </tr>
+   <tr>
+      <td>未注册</td>
+      <td></td>
+      <td></td>
+      <td>MV、音频、短视频>积分刺激1</td>
+   </tr>
+   <tr>
+      <td rowspan="6">已注册</td>
+      <td rowspan="4">未兑换</td>
+      <td>积分=0</td>
+      <td>MV、音频、短视频>积分刺激1</td>
+   </tr>
+   <tr>
+      <td>0<积分<1000</td>
+      <td>积分刺激2>MV、音频、短视频</td>
+   </tr>
+   <tr>
+      <td>1000<积分<2000</td>
+      <td>积分刺激3>MV、音频、短视频</td>
+   </tr>
+   <tr>
+      <td>积分>2000</td>
+      <td>积分刺激4>MV、音频、短视频</td>
+   </tr>
+   <tr>
+      <td rowspan="2">已兑换</td>
+      <td>最近一次做任务日期>7</td>
+      <td>积分刺激4>MV、音频、短视频</td>
+   </tr>
+   <tr>
+      <td>最近一次做任务日期<7</td>
+      <td>MV、音频、短视频>积分刺激4</td>
+   </tr>
+   </tr>
+</table>
+<h2 id="通知权重默认值">通知权重默认值</h2>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>P0</th>
+<th>P1</th>
+<th>P3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分值</td>
+<td>80</td>
+<td>70</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<h2 id="客户端上传推送通知的已读状态-hiiddeviceid">客户端上传推送通知的已读状态， HiID，deviceID</h2>
+<h2 id="推送包含的-keyvalue">推送包含的 Key，Value</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>Youtube video; Redirection</td>
+<td>视频；应用路径</td>
+</tr>
+<tr>
+<td>youtubevideoID</td>
+<td>e.g., zEATgW9vBfA</td>
+<td>视频 id</td>
+</tr>
+<tr>
+<td>Redirection_Tab</td>
+<td>Redirection_Wallet； Redirection_Income； Redirection_Invite_1； Redirection_Invite_2； Redirection_Invite_3</td>
+<td>应用页面 id</td>
+</tr>
+<tr>
+<td>thumbnail</td>
+<td>e.g., https://img.youtube.com/vi/zEATgW9vBfA/mqdefault.jpg</td>
+<td>视频 封面</td>
+</tr>
+<tr>
+<td>listed</td>
+<td>e.g., PLqDScLCAgatY85zgKYNLsu1y0M7qNrMqE</td>
+<td>歌单 id</td>
+</tr>
+<tr>
+<td>youtubevideoTitle</td>
+<td>e.g., PrankVsPrank- Best pranks!</td>
+<td>视频 title</td>
+</tr>
+<tr>
+<td>eventURL</td>
+<td></td>
+<td>活动 url</td>
+</tr>
+</tbody>
+</table>
+<p>##逻辑</p>
 <ol>
-<li>
-<p>在Track_Info接口中拿到的此歌曲在Last.fm上的 URL<br>
-https://www.last.fm/zh/music/Kanye+West/_/Power</p>
-</li>
-<li>
-<p>通过爬虫获取此 HTML 中的 YouTube 播放地址<br>
-<img src="https://i.imgur.com/fG6Ovn0.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>将这条数据合并到歌曲信息的数据中</p>
-</li>
+<li>优先发送分值最高的内容； 点击PUSH +1分，未点击-6分； 最高分100分，最低分0分；</li>
+<li>出现分值为0时，默认弹内容；</li>
+<li>后续新增通知类型时，默认分值需要根据不同用户分组，进行设置；默认为81分</li>
+<li>Seven的每日文案工作量：内容1条，积分刺激4条；</li>
+<li>MV、音频、短视频，跳转至指定歌曲； 积分刺激，跳转至指定页面；</li>
 </ol>
-<hr>
-<h2 id="主页更多内容下拉刷新自动化">主页更多内容下拉刷新自动化</h2>
-<ul>
-<li>
-<p>用区别国家的 TopArtists，TopTracks获得更多的内容填充到刷新中</p>
-</li>
-<li>
-<p>geo.getTopArtists</p>
-</li>
-</ul>
-<p>country： United States of America</p>
-<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/p7ROCrB.jpg" alt="" loading="lazy"></figure>
-<ul>
-<li>geo.getTopTracks<br>
-<img src="https://i.imgur.com/6JT3I2S.jpg" alt="" loading="lazy"></li>
-</ul>
-<hr>
-<h2 id="主页手动运营的歌单">主页手动运营的歌单</h2>
-<ol>
-<li>
-<p>运营维护Last.fm账户的 playlists</p>
-</li>
-<li>
-<p>通过Playlists API获得用户播放列表</p>
-</li>
-</ol>
-<!-- more -->
-<!-- more -->
-<!-- more -->
+<pre><code class="language-flow">st=&gt;start: 开始
+in=&gt;inputoutput: 输入数据 a，b，c
+cond1=&gt;condition: a &lt; b
+op1=&gt;operation: 交换a，b的值
+cond2=&gt;condition: b &lt; c
+op2=&gt;operation: 交换b,c的值
+out=&gt;inputoutput: 输出数据 a，b，c
+e=&gt;end: 结束
+st-&gt;in-&gt;cond1
+cond1(yes, right)-&gt;op1-&gt;cond2
+cond1(no)-&gt;cond2
+cond2(yes, right)-&gt;op2-&gt;out-&gt;e
+cond2(no)-&gt;out-&gt;e
+</code></pre>
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://charleslee90s.github.io/tag/rE9glYOZV">
-            <span class="flex-auto">Document</span>
-          </a>
         
 
 
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="https://charleslee90s.github.io/post/youtube-zi-mu-shi-xian">
+              <a href="https://charleslee90s.github.io/post/youtube-music-nei-rong-zi-dong-hua">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
-                  Youtube 字幕实现
+                  Youtube Music 内容自动化
                 </h3>
               </a>
             </div>
           
 
-          
-            <div class="next-post">
-              <a href="https://charleslee90s.github.io/post/ji-fen-xi-tong-de-fen-zu-push">
-                <h3 class="post-title">
-                  积分系统的分组Push 
-                  <i class="remixicon-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
           
         </div>
 
