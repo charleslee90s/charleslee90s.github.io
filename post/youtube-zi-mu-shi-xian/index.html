@@ -31,34 +31,19 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一个狗的生活经验
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%B5%81%E7%A8%8B">流程</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8E%A5%E5%8F%A3">服务端接口</a></li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0">接口参数</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -102,56 +87,96 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Youtube 字幕实现</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-19 / 1 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/youtube-zi-mu-shi-xian.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h2 id="流程">流程</h2>
+<p>客户端请求 video 的字幕（ID，lang） &gt; 服务端下载字幕文件 &gt; 下发给客户端 &gt; 客户端解析匹配时间戳进行展示</p>
+<h2 id="服务端接口">服务端接口</h2>
+<p><a href="https://developers.google.com/youtube/v3/docs/captions/download">字幕接口</a></p>
+<p>PS：每次下载需要消耗200配额</p>
+<h2 id="接口参数">接口参数</h2>
+<ul>
+<li>
+<p>Tfmt：可选择以下格式文件，由客户端开发根据需要指定<br>
+sbv - SubViewer字幕<br>
+scc - Scenarist隐藏式字幕格式<br>
+srt - SubRip字幕<br>
+Ttml - 定时文本标记语言标题<br>
+Vtt - Web视频文本跟踪标题</p>
+</li>
+<li>
+<p>tlang：根据客户端语言</p>
+</li>
+</ul>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://charleslee90s.github.io/tag/rE9glYOZV">
+            <span class="flex-auto">Document</span>
+          </a>
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-                <a href="https://charleslee90s.github.io/post/kuai-su-da-jian-github-pages" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    快速搭建 GitHub Pages
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-01</div>
-              
-            
-              
-                <a href="https://charleslee90s.github.io/post/youtube-zi-mu-shi-xian" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Youtube 字幕实现
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-19</div>
-              
-            
-              
-                <a href="https://charleslee90s.github.io/post/youtube-music-nei-rong-zi-dong-hua" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Youtube Music 内容自动化
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-02-21</div>
-              
-            
+            <div class="prev-post">
+              <a href="https://charleslee90s.github.io/post/kuai-su-da-jian-github-pages">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  快速搭建 GitHub Pages
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://charleslee90s.github.io/post/youtube-music-nei-rong-zi-dong-hua">
+                <h3 class="post-title">
+                  Youtube Music 内容自动化
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        </div>
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'faf534ff4a6fb70efeaa',
+    clientSecret: '881ae0e989ee79d02a7f0fe60c74a16c5a8ca293',
+    repo: 'charleslee90s.github.io',
+    owner: 'charleslee90s',
+    admin: ['charleslee90s'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 

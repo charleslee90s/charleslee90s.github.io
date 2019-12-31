@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2019-12-31T06:27:41.938Z</updated>
+    <updated>2019-12-31T06:30:25.181Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
@@ -39,6 +39,33 @@
 <img src="https://i.imgur.com/xHWzPjO.jpg" alt="-w500" loading="lazy"></p>
 <p>完成编辑保存后就可以访问了，url格式为 account.github.io</p>
 <figure data-type="image" tabindex="3"><img src="https://i.imgur.com/llrtYgT.jpg" alt="-w500" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Youtube 字幕实现]]></title>
+        <id>https://charleslee90s.github.io/post/youtube-zi-mu-shi-xian</id>
+        <link href="https://charleslee90s.github.io/post/youtube-zi-mu-shi-xian">
+        </link>
+        <updated>2019-08-19T06:28:16.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="流程">流程</h2>
+<p>客户端请求 video 的字幕（ID，lang） &gt; 服务端下载字幕文件 &gt; 下发给客户端 &gt; 客户端解析匹配时间戳进行展示</p>
+<h2 id="服务端接口">服务端接口</h2>
+<p><a href="https://developers.google.com/youtube/v3/docs/captions/download">字幕接口</a></p>
+<p>PS：每次下载需要消耗200配额</p>
+<h2 id="接口参数">接口参数</h2>
+<ul>
+<li>
+<p>Tfmt：可选择以下格式文件，由客户端开发根据需要指定<br>
+sbv - SubViewer字幕<br>
+scc - Scenarist隐藏式字幕格式<br>
+srt - SubRip字幕<br>
+Ttml - 定时文本标记语言标题<br>
+Vtt - Web视频文本跟踪标题</p>
+</li>
+<li>
+<p>tlang：根据客户端语言</p>
+</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
