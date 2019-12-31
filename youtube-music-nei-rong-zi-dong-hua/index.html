@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Charles&#39;s Blog</title>
 <meta name="description" content="一个狗的波澜壮阔大计划" />
-<link rel="shortcut icon" href="https://charleslee90s.github.io/favicon.ico?v=1577774912883">
+<link rel="shortcut icon" href="https://charleslee90s.github.io/favicon.ico?v=1577775312858">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://charleslee90s.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://charleslee90s.github.io/images/avatar.png?v=1577774912883" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://charleslee90s.github.io/images/avatar.png?v=1577775312858" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Charles&#39;s Blog</h1>
       </div>
@@ -37,9 +37,19 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%B5%81%E7%A8%8B">流程</a></li>
-<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%8E%A5%E5%8F%A3">服务端接口</a></li>
-<li><a href="#%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0">接口参数</a></li>
+<li><a href="#artists-%E8%87%AA%E5%8A%A8%E5%8C%96">Artists 自动化</a>
+<ul>
+<li><a href="#h3-id1%E4%B8%9A%E5%8A%A1%E7%BB%93%E6%9E%84h2"><h3 id="1">业务结构</h2></a></li>
+<li><a href="#h3-id2%E9%83%A8%E5%88%86%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89h2"><h3 id="2">部分参数定义</h2></a></li>
+<li><a href="#h3-id3artists%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="3">Artists相关接口</h2></a></li>
+<li><a href="#h3-id4albums%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="4">Albums相关接口</h2></a></li>
+<li><a href="#h3-id5track%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="5">Track相关接口</h2></a></li>
+<li><a href="#h3-id6tag-%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3h2"><h3 id="6">Tag 相关接口</h2></a></li>
+</ul>
+</li>
+<li><a href="#lastfm%E4%B8%8E-youtube-%E7%9A%84%E6%AD%8C%E6%9B%B2%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%8E%A5">Last.fm与 Youtube 的歌曲数据对接</a></li>
+<li><a href="#%E4%B8%BB%E9%A1%B5%E6%9B%B4%E5%A4%9A%E5%86%85%E5%AE%B9%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E8%87%AA%E5%8A%A8%E5%8C%96">主页更多内容下拉刷新自动化</a></li>
+<li><a href="#%E4%B8%BB%E9%A1%B5%E6%89%8B%E5%8A%A8%E8%BF%90%E8%90%A5%E7%9A%84%E6%AD%8C%E5%8D%95">主页手动运营的歌单</a></li>
 </ul>
 </li>
 </ul>
@@ -88,33 +98,164 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Youtube 字幕实现</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Youtube Music 内容自动化</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-08-19 / 1 min read
+          2019-02-21 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/youtube-zi-mu-shi-xian.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/youtube-music-nei-rong-zi-dong-hua.jpg" alt="">
         
         <div class="post-content yue">
-          <h2 id="流程">流程</h2>
-<p>客户端请求 video 的字幕（ID，lang） &gt; 服务端下载字幕文件 &gt; 下发给客户端 &gt; 客户端解析匹配时间戳进行展示</p>
-<h2 id="服务端接口">服务端接口</h2>
-<p><a href="https://developers.google.com/youtube/v3/docs/captions/download">字幕接口</a></p>
-<p>PS：每次下载需要消耗200配额</p>
-<h2 id="接口参数">接口参数</h2>
+          <!-- more -->
+<h2 id="artists-自动化">Artists 自动化</h2>
 <ul>
 <li>
-<p>Tfmt：可选择以下格式文件，由客户端开发根据需要指定<br>
-sbv - SubViewer字幕<br>
-scc - Scenarist隐藏式字幕格式<br>
-srt - SubRip字幕<br>
-Ttml - 定时文本标记语言标题<br>
-Vtt - Web视频文本跟踪标题</p>
+<p><a href="#1">业务结构</a></p>
 </li>
 <li>
-<p>tlang：根据客户端语言</p>
+<p><a href="#2">部分参数定义</a></p>
+</li>
+<li>
+<p><a href="#3">Artists相关接口</a></p>
+</li>
+<li>
+<p><a href="#4">Albums相关接口相关接口</a></p>
+</li>
+<li>
+<p><a href="#5">Track相关接口</a></p>
+</li>
+<li>
+<p><a href="#6">Tag相关接口</a></p>
 </li>
 </ul>
+<h3 id="h3-id1业务结构h2"><h3 id="1">业务结构</h2></h3>
+<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/jmRdmva.png" alt="内容架构" loading="lazy"></figure>
+<p>从第三方服务商提供的接口中获取数据，保存在我们的服务器中，并提供给客户端接口进行请求</p>
+<h3 id="h3-id2部分参数定义h2"><h3 id="2">部分参数定义</h2></h3>
+<p>autocorrect[0|1] —— 将拼写错误的艺术家姓名转换为正确的艺术家姓名，然后返回正确的版本。 更正后的艺术家姓名将在回复中返回。<br>
+lang —— eng<br>
+api_key —— 702db34a4847bf9ea056e7484246af84</p>
+<h3 id="h3-id3artists相关接口h2"><h3 id="3">Artists相关接口</h2></h3>
+<ul>
+<li>
+<p>Charts_TopArtists<br>
+<img src="https://i.imgur.com/WpWehwT.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>Artists_Info<br>
+<img src="https://i.imgur.com/CPBmtMl.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>Artists_TopTags<br>
+在上个接口中</p>
+</li>
+<li>
+<p>Artists_Similar<br>
+所有 TopTags 对应的 Tag_TopArtists的集合</p>
+</li>
+<li>
+<p>Artists_TopTracks<br>
+<img src="https://i.imgur.com/imJYotA.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>Artists_TopAlbums<br>
+<img src="https://i.imgur.com/8rAPAub.jpg" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h3 id="h3-id4albums相关接口h2"><h3 id="4">Albums相关接口</h2></h3>
+<ul>
+<li>
+<p>Albums_Info<br>
+<img src="https://i.imgur.com/T33I5r5.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>Albums_TopTags<br>
+在上个接口中</p>
+</li>
+<li>
+<p>Albums_Similar<br>
+所有 TopTags 对应的 Tag_TopAlbums的集合</p>
+</li>
+</ul>
+<h3 id="h3-id5track相关接口h2"><h3 id="5">Track相关接口</h2></h3>
+<ul>
+<li>
+<p>Track_Info<br>
+<img src="https://i.imgur.com/Pu7Z9H0.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>Track_TopTags<br>
+在上个接口中</p>
+</li>
+<li>
+<p>Track_Similar<br>
+所有 TopTags 对应的 Tag_TopTracks的集合</p>
+</li>
+</ul>
+<h3 id="h3-id6tag-相关接口h2"><h3 id="6">Tag 相关接口</h2></h3>
+<p>现有的艺术家，专辑，歌曲中包含此 tag 的内容</p>
+<ul>
+<li>Tag_Info</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/fJ25B2S.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>Tag_TopArtists<br>
+现有的艺术家中包含此 Tag 的内容，并提供给 Artists_Similar 使用</p>
+</li>
+<li>
+<p>Tag_TopAlbums<br>
+现有的专辑中包含此 Tag 的内容，并提供给 Albums_Similar 使用</p>
+</li>
+<li>
+<p>Tag_TopTracks<br>
+现有的歌曲中包含此 Tag 的内容，并提供给 Track_Similar 使用</p>
+</li>
+</ul>
+<hr>
+<h2 id="lastfm与-youtube-的歌曲数据对接">Last.fm与 Youtube 的歌曲数据对接</h2>
+<ol>
+<li>
+<p>在Track_Info接口中拿到的此歌曲在Last.fm上的 URL<br>
+https://www.last.fm/zh/music/Kanye+West/_/Power</p>
+</li>
+<li>
+<p>通过爬虫获取此 HTML 中的 YouTube 播放地址<br>
+<img src="https://i.imgur.com/fG6Ovn0.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>将这条数据合并到歌曲信息的数据中</p>
+</li>
+</ol>
+<hr>
+<h2 id="主页更多内容下拉刷新自动化">主页更多内容下拉刷新自动化</h2>
+<ul>
+<li>
+<p>用区别国家的 TopArtists，TopTracks获得更多的内容填充到刷新中</p>
+</li>
+<li>
+<p>geo.getTopArtists</p>
+</li>
+</ul>
+<p>country： United States of America</p>
+<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/p7ROCrB.jpg" alt="" loading="lazy"></figure>
+<ul>
+<li>geo.getTopTracks<br>
+<img src="https://i.imgur.com/6JT3I2S.jpg" alt="" loading="lazy"></li>
+</ul>
+<hr>
+<h2 id="主页手动运营的歌单">主页手动运营的歌单</h2>
+<ol>
+<li>
+<p>运营维护Last.fm账户的 playlists</p>
+</li>
+<li>
+<p>通过Playlists API获得用户播放列表</p>
+</li>
+</ol>
+<!-- more -->
+<!-- more -->
+<!-- more -->
 
         </div>
 
@@ -128,10 +269,10 @@ Vtt - Web视频文本跟踪标题</p>
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="https://charleslee90s.github.io/post/kuai-su-da-jian-github-pages">
+              <a href="https://charleslee90s.github.io/youtube-zi-mu-shi-xian">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
-                  快速搭建 GitHub Pages
+                  Youtube 字幕实现
                 </h3>
               </a>
             </div>
@@ -139,9 +280,9 @@ Vtt - Web视频文本跟踪标题</p>
 
           
             <div class="next-post">
-              <a href="https://charleslee90s.github.io/post/youtube-music-nei-rong-zi-dong-hua">
+              <a href="https://charleslee90s.github.io/ji-fen-xi-tong-de-fen-zu-push">
                 <h3 class="post-title">
-                  Youtube Music 内容自动化
+                  积分系统的分组Push 
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
