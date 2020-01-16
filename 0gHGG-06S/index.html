@@ -31,33 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一个狗的波澜壮阔大计划
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -102,106 +78,63 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">2020年一季度计划</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-01-16 / 0 min read
+        </div>
+        
+        <div class="post-content yue">
+          <figure data-type="image" tabindex="1"><img src="https://charleslee90s.github.io/post-images/1579157877731.png" alt="" loading="lazy"></figure>
+
+        </div>
+
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2020
-            </h2>
-            
-              
-                <a href="https://charleslee90s.github.io/0gHGG-06S" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    2020年一季度计划
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2020-01-16</div>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-            
-              
-                <a href="https://charleslee90s.github.io/kuai-su-da-jian-github-pages" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    快速搭建 GitHub Pages
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-01</div>
-              
-            
-              
-                <a href="https://charleslee90s.github.io/youtube-zi-mu-shi-xian" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Youtube 字幕实现
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-08-19</div>
-              
-            
-              
-                <a href="https://charleslee90s.github.io/youtube-music-nei-rong-zi-dong-hua" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Youtube Music 内容自动化
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-02-21</div>
-              
-            
-              
-            
-          
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2018
-            </h2>
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="https://charleslee90s.github.io/ji-fen-xi-tong-de-fen-zu-push" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    积分系统的分组Push 
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2018-11-14</div>
-              
-            
+            <div class="next-post">
+              <a href="https://charleslee90s.github.io/kuai-su-da-jian-github-pages">
+                <h3 class="post-title">
+                  快速搭建 GitHub Pages
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        </div>
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'faf534ff4a6fb70efeaa',
+    clientSecret: '881ae0e989ee79d02a7f0fe60c74a16c5a8ca293',
+    repo: 'charleslee90s.github.io',
+    owner: 'charleslee90s',
+    admin: ['charleslee90s'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
