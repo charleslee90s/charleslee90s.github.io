@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Charles&#39;s Blog</title>
 <meta name="description" content="一个狗的波澜壮阔大计划" />
-<link rel="shortcut icon" href="https://charleslee90s.github.io/favicon.ico?v=1579229747929">
+<link rel="shortcut icon" href="https://charleslee90s.github.io/favicon.ico?v=1579230763102">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://charleslee90s.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://charleslee90s.github.io/images/avatar.png?v=1579229747929" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://charleslee90s.github.io/images/avatar.png?v=1579230763102" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Charles&#39;s Blog</h1>
       </div>
@@ -156,25 +156,28 @@
 
         
           
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-          
-            <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css">
-<script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
-
-<div id="disqus_thread"></div>
+<div id="gitalk-container"></div>
 
 <script>
 
-var options = {
-  shortname: '',
-  apikey: 'EtUZ8rwh38OwFOfyHqoHwNVCsWZ00P8ZzL4tOLSzEcQYqk16yzMvwnich12R95aK',
-}
-if ('') {
-  options.api = ''
-}
-var dsqjs = new DisqusJS(options)
+  var gitalk = new Gitalk({
+    clientID: 'faf534ff4a6fb70efeaa',
+    clientSecret: '881ae0e989ee79d02a7f0fe60c74a16c5a8ca293',
+    repo: 'charleslee90s.github.io',
+    owner: 'charleslee90s',
+    admin: ['charleslee90s'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
 
 </script>
+
+          
 
           
         
