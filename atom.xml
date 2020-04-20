@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://charleslee90s.github.io</id>
     <title>Charles&apos;s Blog</title>
-    <updated>2020-04-20T06:40:45.712Z</updated>
+    <updated>2020-04-20T06:43:07.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://charleslee90s.github.io"/>
     <link rel="self" href="https://charleslee90s.github.io/atom.xml"/>
-    <subtitle>一个狗的波澜壮阔大计划</subtitle>
+    <subtitle>一个dog的波澜壮阔大计划</subtitle>
     <logo>https://charleslee90s.github.io/images/avatar.png</logo>
     <icon>https://charleslee90s.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Charles&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[VPN广告]]></title>
-        <id>https://charleslee90s.github.io/xp6fa9udP</id>
-        <link href="https://charleslee90s.github.io/xp6fa9udP">
+        <id>https://charleslee90s.github.io/vpn-ads</id>
+        <link href="https://charleslee90s.github.io/vpn-ads">
         </link>
         <updated>2020-04-20T06:37:14.000Z</updated>
         <content type="html"><![CDATA[<p>共7个广告位，4个广告ID：1）原生开屏 2）原生 3）banner 4）插屏</p>
