@@ -31,33 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一个狗的波澜壮阔大计划
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -102,18 +78,127 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-2-line"></i> 标签云
-        </h2>
-        <div class="tags-container">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">VPN广告</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-04-20 / 1 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://charleslee90s.github.io/post-images/xp6fa9udP.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>共7个广告位，4个广告ID：1）原生开屏 2）原生 3）banner 4）插屏</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>广告位</th>
+<th>尺寸</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>splash</td>
+<td>全屏</td>
+<td>开屏</td>
+<td>优先展示缓存，触发请求，展示后缓存，倒计时4秒</td>
+</tr>
+<tr>
+<td>2</td>
+<td>主页底部</td>
+<td>320*50</td>
+<td>Banner</td>
+<td>触发请求，展示后缓存，连接成功刷新广告位</td>
+</tr>
+<tr>
+<td>3</td>
+<td>连接成功</td>
+<td>全屏</td>
+<td>开屏</td>
+<td>触发请求，展示后缓存，倒计时4秒</td>
+</tr>
+<tr>
+<td>4</td>
+<td>连接成功_结果页</td>
+<td>320*250</td>
+<td>原生</td>
+<td>触发请求，展示后缓存</td>
+</tr>
+<tr>
+<td>5</td>
+<td>连接成功_结果页_返回</td>
+<td>全屏</td>
+<td>插屏</td>
+<td>触发请求，展示后缓存</td>
+</tr>
+<tr>
+<td>6</td>
+<td>断开连接</td>
+<td>全屏</td>
+<td>开屏</td>
+<td>优先展示缓存，触发请求，展示后缓存，倒计时4秒</td>
+</tr>
+<tr>
+<td>7</td>
+<td>热启动</td>
+<td>全屏</td>
+<td>开屏</td>
+<td>优先展示缓存，触发请求，展示后缓存，倒计时4秒</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://charleslee90s.github.io/tag/rE9glYOZV" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">Document</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">4</span>
-            </a>
+
+          
+            <div class="next-post">
+              <a href="https://charleslee90s.github.io/kuai-su-da-jian-github-pages">
+                <h3 class="post-title">
+                  快速搭建 GitHub Pages
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'faf534ff4a6fb70efeaa',
+    clientSecret: '881ae0e989ee79d02a7f0fe60c74a16c5a8ca293',
+    repo: 'charleslee90s.github.io',
+    owner: 'charleslee90s',
+    admin: ['charleslee90s'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
