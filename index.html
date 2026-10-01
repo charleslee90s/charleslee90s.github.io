@@ -1,314 +1,97 @@
-<html>
+<!doctype html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Charles&#39;s Blog</title>
-<meta name="description" content="一个dog的波澜壮阔大计划" />
-<link rel="shortcut icon" href="https://charleslee90s.github.io/favicon.ico?v=1587480781097">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-<link rel="stylesheet" href="https://charleslee90s.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Charles&#39;s Blog - Atom Feed" href="https://charleslee90s.github.io/atom.xml">
-
-
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07121b" />
+    <meta name="description" content="李雨阳 Charles Lee｜产品负责人。12 年产品经验，专注出海增长、商业化与企业级产品体验。" />
+    <link rel="canonical" href="https://charleslee90s.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://charleslee90s.github.io/" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="Charles Lee Portfolio" />
+    <meta property="og:title" content="李雨阳 Charles Lee｜产品负责人" />
+    <meta property="og:description" content="12 年产品经验，10 年 To C 出海。查看完整经历、代表项目与业务战绩。" />
+    <meta property="og:image" content="https://charleslee90s.github.io/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="李雨阳 Charles Lee，产品负责人，出海增长与商业化" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="李雨阳 Charles Lee｜产品负责人" />
+    <meta name="twitter:description" content="12 年产品经验，10 年 To C 出海。查看完整经历、代表项目与业务战绩。" />
+    <meta name="twitter:image" content="https://charleslee90s.github.io/og.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>李雨阳 Charles Lee — 产品负责人</title>
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://charleslee90s.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://charleslee90s.github.io/images/avatar.png?v=1587480781097" alt="">
+    <div id="app">
+      <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+      <header class="site-header shell">
+        <a class="wordmark" href="#top" aria-label="Charles Lee，返回首页">
+          <svg class="wordmark-mark" viewBox="0 0 48 48" role="img" aria-hidden="true">
+            <path d="M29 10H18Q8 10 8 20V28Q8 38 18 38H29M29 10V38H42" />
+          </svg>
         </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Charles&#39;s Blog</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            一个dog的波澜壮阔大计划
-          </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+        <nav aria-label="页面导航"><a href="#results">战绩</a><a href="#work">项目</a><a href="#timeline">经历</a><a href="#contact">联系</a></nav>
+      </header>
+
+      <main id="top">
+        <section class="hero shell" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow hero-enter"><span class="live-dot"></span> PRODUCT LEADER / GLOBAL GROWTH / AI BUILDER</p>
+            <h1 id="hero-title" class="hero-enter">李雨阳<span class="highlight"> Charles Lee</span><span class="period">.</span></h1>
+            <p class="hero-role hero-enter">To C 产品负责人 / 出海产品负责人 / 高级产品经理</p>
+            <p class="hero-intro hero-enter">12 年产品经验，10 年 To C 出海。从用户体验、增长到商业化，独立承担完整业务线；近两年拓展至企业终端安全 SaaS，并用 AI Agent 构建实际运行的业务系统。</p>
+            <div class="hero-actions hero-enter"><a class="primary-link" href="#work">看代表项目 <span aria-hidden="true">↘</span></a><a class="text-link" href="#timeline">看职业轨迹 <span aria-hidden="true">↗</span></a></div>
           </div>
-        </div>
-      
+          <div class="hero-stage hero-enter" aria-hidden="true">
+            <div class="stage-shell">
+              <div class="stage-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+              <div class="core"><span>STRATEGY</span><strong>0<span>→</span>1</strong><span>TO SCALE</span></div>
+              <div class="stage-label stage-label-a">GROWTH / 01</div><div class="stage-label stage-label-b">DESIGN / 02</div><div class="stage-label stage-label-c">BUILD / 03</div>
+            </div>
+          </div>
+          <div class="hero-index"><span>SCROLL TO EXPLORE</span><span class="vertical-rule"></span><span>01 / 04</span></div>
+        </section>
+
+        <section id="results" class="results section-pad" aria-labelledby="results-title">
+          <div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">01 / MEASURABLE IMPACT</p><h2 id="results-title">让结果说话<span class="period">.</span></h2></div></div>
+            <div class="metrics">
+              <article class="metric reveal"><span class="metric-index">01 / 海外工具</span><div class="metric-number"><span data-count="500">500</span><small>万</small></div><p>清理安全产品日活</p><div class="metric-foot">Google Play 工具榜 Top 10 · 清理安全品类 Top 3</div></article>
+              <article class="metric reveal"><span class="metric-index">02 / 网络连接</span><div class="metric-number"><span data-count="20">20</span><small>万+</small></div><p>海外网络连接工具 DAU</p><div class="metric-foot">上线约两三个月达到</div></article>
+              <article class="metric reveal"><span class="metric-index">03 / 渠道分销</span><div class="metric-number"><span data-count="110">110</span><small>家</small></div><p>渠道合作伙伴接入</p><div class="metric-foot">归因、分账与结算体系</div></article>
+              <article class="metric reveal"><span class="metric-index">04 / 企业产品</span><div class="metric-number"><span data-count="100">100</span><small>+</small></div><p>企业级客户</p><div class="metric-foot">企业终端安全 SaaS</div></article>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="work section-pad shell" aria-labelledby="work-title">
+          <div class="section-heading reveal"><div><p class="eyebrow">02 / SELECTED WORK</p><h2 id="work-title">代表项目<span class="period">.</span></h2></div></div>
+          <div class="project-list">
+            <article class="project-card reveal" data-tilt><div class="project-top"><span>01 / B2B SAAS</span><span>2024.04 — 2026.10</span></div><div class="project-body"><div><p class="project-kicker">SECURITY × EXPERIENCE</p><h3>企业终端安全<br />产品体系</h3><p>负责奇安信旗下 SaaS 产品线（近百万台终端）的产品体验，将管理员与终端用户的复杂任务转化为清晰路径；同时建设合作伙伴、推广员、归因与分账体系。</p></div><div class="project-visual visual-security" aria-hidden="true"><div class="signal-arc arc-one"></div><div class="signal-arc arc-two"></div><div class="signal-arc arc-three"></div><div class="signal-core">SECURE<br />BY DESIGN</div></div></div><div class="project-tags"><span>产品战略</span><span>体验设计</span><span>渠道体系</span></div><details class="project-details"><summary>查看问题、行动与结果</summary><div class="project-detail-grid"><p><strong>问题</strong>近百万台终端规模的系统中，管理员与终端用户面对的信息和操作路径不同。</p><p><strong>行动</strong>重构管理后台信息架构与终端侧状态呈现，设计“全局状态 → 问题发现 → 处理跟进 → 结果反馈”的旅程；规划合作伙伴、推广员、客户归因与分成结算。</p><p><strong>结果</strong>支撑 100+ 企业级客户与 110 家渠道合作伙伴；渠道开通、退款、开票和结算线上流转，并面向奇安信全国销售体系完成渠道版推介与培训。</p></div></details></article>
+            <article class="project-card reveal" data-tilt><div class="project-top"><span>02 / CONSUMER PRODUCT</span><span>2024.04 — 2026.10</span></div><div class="project-body"><div><p class="project-kicker">GAMING × GROWTH</p><h3>游戏加速器<br />从 0 到 1</h3><p>从立项到上线迭代，搭建会员订阅与广告双变现；以 B 站 UP 主推广码按新增用户数月度分成。用 AI Agent 承接内容处理与 ROI/LTV 数据归集计算。</p></div><div class="project-visual visual-game" aria-hidden="true"><span class="speed-line s1"></span><span class="speed-line s2"></span><span class="speed-line s3"></span><strong>PLAY<br />FASTER</strong></div></div><div class="project-tags"><span>0 → 1</span><span>订阅与广告</span><span>AI 自动化</span></div><details class="project-details"><summary>查看问题、行动与结果</summary><div class="project-detail-grid"><p><strong>问题</strong>新业务需要同时验证用户价值、增长渠道与收入模型，团队没有专职内容运营。</p><p><strong>行动</strong>设计会员与广告双变现、B 站 UP 主推广码月度分成；用 Agent 搭建内容抓取处理流水线和自动计算 ROI/LTV 的数据看板。</p><p><strong>结果</strong>产品上线并持续迭代，跑通拉新—活跃—变现链路；内容更新与数据归集由系统运行、人工审核。</p></div></details></article>
+            <article class="project-card reveal" data-tilt><div class="project-top"><span>03 / GLOBAL GROWTH</span><span>2016 — 2023</span></div><div class="project-body"><div><p class="project-kicker">GLOBAL × MONETIZATION</p><h3>出海增长与<br />商业化</h3><p>从 500 万日活工具产品到 20 万 DAU 网络连接产品，负责数据埋点、增长策略、广告变现与投放 ROI；海外社交产品进入 Google Play 社交新品推荐榜，并为海外创作者 SaaS 搭建交易、支付和 Affiliate 分佣能力。</p></div><div class="project-visual visual-global" aria-hidden="true"><div class="globe-ring g1"></div><div class="globe-ring g2"></div><div class="globe-ring g3"></div><strong>GLOBAL<br />AT SCALE</strong></div></div><div class="project-tags"><span>出海增长</span><span>广告变现</span><span>跨境支付</span></div><details class="project-details"><summary>查看问题、行动与结果</summary><div class="project-detail-grid"><p><strong>问题</strong>不同国家、端与业务阶段的获客成本、留存和变现方式差异大。</p><p><strong>行动</strong>建立埋点与 ROI/LTV 模型，按市场调整增长策略；优化广告场景与聚合，对创作者 SaaS 设计交易、支付及推荐分佣链路。</p><p><strong>结果</strong>清理安全产品日活 500 万、Google Play 工具榜 Top 10 / 品类 Top 3；网络连接工具上线两三个月 DAU 20 万+；社交产品进入 Google Play 社交新品推荐榜。</p></div></details></article>
+            <article class="project-card reveal" data-tilt><div class="project-top"><span>04 / AI-NATIVE BUILD</span><span>2024.04 — 2026.10</span></div><div class="project-body"><div><p class="project-kicker">IDEA × AGENT × SHIPPED SYSTEM</p><h3>把 AI 变成<br />业务生产力</h3><p>使用 Codex / Claude CLI / WorkBuddy 自主搭建内容处理流水线与增长 ROI 数据看板，接入友盟、广告聚合平台及 Apple / vivo / OPPO 商店推广数据；自动归集投放与变现数据并计算 ROI/LTV，人工聚焦审核和决策。</p></div><div class="project-visual visual-ai" aria-hidden="true"><div class="flow-node">DATA</div><span class="flow-line"></span><div class="flow-node central-node">AGENT</div><span class="flow-line"></span><div class="flow-node">DECISION</div></div></div><div class="project-tags"><span>Codex</span><span>Claude CLI</span><span>WorkBuddy</span></div><details class="project-details"><summary>查看问题、行动与结果</summary><div class="project-detail-grid"><p><strong>问题</strong>缺少专职运营时，内容更新和跨平台投放、变现数据归集容易消耗大量人工。</p><p><strong>行动</strong>通过 Codex、Claude CLI、WorkBuddy 搭建自动抓取与处理流水线、ROI 看板，连接友盟、广告聚合平台和应用商店推广后台。</p><p><strong>结果</strong>系统自动运行内容更新、数据归集与 ROI/LTV 计算，人工保留审核与决策。</p></div></details></article>
+          </div>
+        </section>
+
+        <section id="resume" class="timeline-section section-pad" aria-labelledby="timeline-title">
+          <div id="timeline" class="shell">
+            <div class="section-heading reveal"><div><p class="eyebrow">03 / CAREER TIMELINE</p><h2 id="timeline-title">职业生涯<span class="period">.</span></h2></div></div>
+            <div class="timeline-wrap"><div class="timeline-line" aria-hidden="true"><span></span></div><ol class="timeline">
+              <li class="reveal"><span class="timeline-date">2024 — 2026</span><div><h3>产品负责人 <small>戎码科技</small></h3><p>企业终端安全 SaaS、渠道分销体系与游戏加速器新业务。</p></div></li>
+              <li class="reveal"><span class="timeline-date">2022 — 2023</span><div><h3>达人变现业务负责人 <small>逐梦星空</small></h3><p>海外创作者 SaaS 商业化、跨境交易支付与社媒工具。</p></div></li>
+              <li class="reveal"><span class="timeline-date">2020 — 2021</span><div><h3>产品合伙人 <small>亿湾科技</small></h3><p>海外网络连接工具与陌生人社交产品，从 0 到 1 负责增长和变现。</p></div></li>
+              <li class="reveal"><span class="timeline-date">2016 — 2020</span><div><h3>高级产品经理 <small>TCL 互联网事业部</small></h3><p>海外清理安全、内容业务与网络连接工具，多条业务线规模化。</p></div></li>
+              <li class="reveal"><span class="timeline-date">2014 — 2015</span><div><h3>产品经理 <small>竞技世界</small></h3><p>海外工具产品规划、增长、广告变现与内部产品孵化。</p></div></li>
+            </ol></div>
+          </div>
+        </section>
+        <section id="contact" class="contact-section section-pad shell" aria-labelledby="contact-title"><p class="eyebrow reveal">04 / LET'S BUILD WHAT'S NEXT</p><h2 id="contact-title" class="reveal">有值得做的事？<br /><span class="highlight">聊聊吧。</span></h2><div class="contact-bottom reveal"><a class="contact-mail" href="mailto:charleslee90s@gmail.com">charleslee90s@gmail.com <span aria-hidden="true">↗</span></a><div class="socials"><a href="https://dribbble.com/opusl" target="_blank" rel="noreferrer">Dribbble ↗</a><a href="https://www.linkedin.com/in/charleslee90s/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
+      </main>
+      <footer class="site-footer shell"><span>© 2026 CHARLES LEE</span><span>PRODUCT × DESIGN × CODE</span><a href="#top">BACK TO TOP ↑</a></footer>
     </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
-    
-      
-        <a href="/" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="https://charleslee90s.github.io/about" class="menu" style="animation-delay: 0.6000000000000001s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/charleslee90s/charleslee90s.github.io" target="_blank">Charles Lee</a></div>
-    <a class="rss" href="https://charleslee90s.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="remixicon-article-line"></i>
-          最新文章
-        </h2>
-        
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-      <a href="https://charleslee90s.github.io/vpn-ads" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://charleslee90s.github.io/post-images/vpn-ads.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/vpn-ads">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">VPN广告</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2020-04-20 / 1 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-      <a href="https://charleslee90s.github.io/kuai-su-da-jian-github-pages" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://charleslee90s.github.io/post-images/kuai-su-da-jian-github-pages.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/kuai-su-da-jian-github-pages">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">快速搭建 GitHub Pages</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-11-01 / 1 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-    
-      <a href="https://charleslee90s.github.io/youtube-zi-mu-shi-xian" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://charleslee90s.github.io/post-images/youtube-zi-mu-shi-xian.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/youtube-zi-mu-shi-xian">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Youtube 字幕实现</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-08-19 / 1 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
-    
-      <a href="https://charleslee90s.github.io/youtube-music-nei-rong-zi-dong-hua" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://charleslee90s.github.io/post-images/youtube-music-nei-rong-zi-dong-hua.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/youtube-music-nei-rong-zi-dong-hua">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Youtube Music 内容自动化</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-02-21 / 2 min read</div>
-    </div>
-  </section>
-
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${4 * 0.2}s` }">
-    
-      <a href="https://charleslee90s.github.io/ji-fen-xi-tong-de-fen-zu-push" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://charleslee90s.github.io/post-images/ji-fen-xi-tong-de-fen-zu-push.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://charleslee90s.github.io/ji-fen-xi-tong-de-fen-zu-push">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">积分系统的分组Push </h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2018-11-14 / 2 min read</div>
-    </div>
-  </section>
-
-        <div class="read-more">
-          
-        </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    <script src="https://charleslee90s.github.io/media/prism.js"></script>  
-<script>
-
-Prism.highlightAll()
-
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
-</script>
-  
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

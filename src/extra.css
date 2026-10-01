@@ -1,0 +1,21 @@
+.visual-ai{background:radial-gradient(circle at 50% 50%,#194754,#091d27 70%);gap:8px;padding:20px}
+.flow-node{z-index:1;flex:0 0 auto;border:1px solid #75c8b3;color:#b8f5df;font-family:"DM Mono",monospace;font-size:.65rem;letter-spacing:.07em;padding:14px 10px;box-shadow:0 0 20px #b8f5df15}
+.central-node{background:#b8f5df;color:#07121b;box-shadow:0 0 40px #b8f5df5a;animation:flowbeat 2s ease-in-out infinite}
+.flow-line{height:1px;flex:1;min-width:12px;background:linear-gradient(90deg,transparent,#b8f5df,transparent);background-size:200% 100%;animation:flowmove 1.5s linear infinite}
+@keyframes flowmove{to{background-position:-200% 0}}
+@keyframes flowbeat{50%{transform:scale(1.09)}}
+@media(max-width:650px){.flow-node{font-size:.54rem;padding:12px 7px}.visual-ai{gap:4px;padding:10px}}
+@media(prefers-reduced-motion:reduce){.central-node,.flow-line{animation:none}}
+.stage-shell{position:absolute;inset:0;transform:perspective(850px) rotateX(var(--stage-x,0deg)) rotateY(var(--stage-y,0deg));transition:transform .42s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.hero-stage::after{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at var(--light-x,50%) var(--light-y,50%),#b8f5df1c,transparent 52%);pointer-events:none;mix-blend-mode:screen}
+.project-card::before{background:radial-gradient(480px circle at var(--spot-x,50%) var(--spot-y,50%),#b8f5df23,transparent 58%);opacity:0;transition:opacity .28s ease}
+.project-card:hover::before{opacity:1}
+.timeline-wrap{position:relative}
+.timeline-line{position:absolute;left:2px;top:36px;bottom:34px;width:1px;background:#95b9ae;pointer-events:none}
+.timeline-line span{display:block;width:2px;height:0;background:#267d6c;box-shadow:0 0 14px #267d6c88}
+.timeline li::before{z-index:1;transition:transform .28s ease,box-shadow .28s ease,background .28s ease}
+.timeline li.is-current::before{transform:scale(2);background:#1a8d75;box-shadow:0 0 0 5px #1a8d7524,0 0 18px #1a8d7566}
+.timeline li.is-current{background:#c5e0d55c}
+@media (hover:none){.project-card::before{opacity:0!important}}
+@media (prefers-reduced-motion:reduce){.stage-shell{transform:none}.hero-stage::after,.project-card::before{display:none}}
+@media print{.timeline-line,.hero-stage::after,.project-card::before{display:none}.timeline li.is-current{background:none}}

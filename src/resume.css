@@ -1,0 +1,14 @@
+.hero h1{font-size:clamp(3.4rem,6.1vw,6.8rem)}
+.hero-role{font-size:clamp(1rem,1.4vw,1.2rem);font-weight:700;color:#b8f5df;margin:0 0 18px;line-height:1.6}
+.metric-foot{font-family:Manrope,"PingFang SC","Microsoft YaHei",sans-serif;font-size:.78rem;line-height:1.6;letter-spacing:0;color:#aec9c5}
+.project-details{border-top:1px solid #31505a;margin-top:28px;padding-top:21px}
+.project-details summary{list-style:none;cursor:pointer;color:#b8f5df;font-size:.88rem;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.project-details summary::-webkit-details-marker{display:none}
+.project-details summary::after{content:"+";font-size:1.35rem;line-height:1}
+.project-details[open] summary::after{content:"−"}
+.project-details summary:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.project-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-top:22px}
+.project-detail-grid p{margin:0;color:#b2c8c8;font-size:.9rem;line-height:1.8}
+.project-detail-grid strong{display:block;color:#b8f5df;font-size:.75rem;letter-spacing:.08em;margin-bottom:9px}
+@media(max-width:950px){.project-detail-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.hero h1{font-size:clamp(2.9rem,11vw,4.8rem)}.hero-role{font-size:.94rem}.site-header nav{gap:3px;overflow:visible}.site-header nav a,.site-header nav a:last-child{display:inline-flex;align-items:center;min-height:40px;padding-inline:4px;font-size:.875rem}.metric-index,.project-top,.project-kicker,.project-tags span{font-size:.75rem}.metric-foot{font-size:.875rem}.project-body p:not(.project-kicker){font-size:1rem}.project-detail-grid p{font-size:.87rem}}

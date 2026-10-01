@@ -1,0 +1,18 @@
+{
+  "name": "charles-lee-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "lenis": "1.3.26",
+    "motion": "12.23.12"
+  },
+  "devDependencies": {
+    "vite": "7.3.6"
+  }
+}
