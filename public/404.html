@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>页面不存在｜Charles Lee</title>
+    <style>
+      :root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#07121b;color:#e9f2f0}
+      body{min-height:100vh;margin:0;display:grid;place-items:center}
+      main{width:min(560px,calc(100% - 40px));padding:48px;border:1px solid #31505a;background:#10242d}
+      h1{margin:0 0 12px;color:#b8f5df;font-size:2rem}p{color:#b6c6c6;line-height:1.7}
+      nav{display:flex;gap:20px;margin-top:28px}a{color:#b8f5df}
+    </style>
+    <script>
+      const legacyBlogRoots = new Set([
+        "about", "archives", "tag", "tags", "vpn-ads",
+        "kuai-su-da-jian-github-pages", "youtube-zi-mu-shi-xian",
+        "youtube-music-nei-rong-zi-dong-hua", "ji-fen-xi-tong-de-fen-zu-push",
+        "images", "post-images", "styles", "media", "atom.xml", "favicon.ico"
+      ]);
+      const oldPath = window.location.pathname.replace(/^\/+/, "");
+      const root = oldPath.split("/")[0];
+      if (legacyBlogRoots.has(root)) {
+        window.location.replace(`/blog/${oldPath}${window.location.search}${window.location.hash}`);
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>页面不存在</h1>
+      <p>你访问的地址可能已调整。</p>
+      <nav><a href="/">个人网站</a><a href="/blog/">旧博客</a></nav>
+    </main>
+  </body>
+</html>
